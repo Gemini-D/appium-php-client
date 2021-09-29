@@ -1,5 +1,8 @@
-# component-creater
+# Appium PHP Client
+
+## 安装
 
 ```
-composer create-project hyperf/component-creater
+composer create-project gemini/appium-php-client
 ```
+
