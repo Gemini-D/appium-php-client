@@ -1,12 +1,12 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of Hyperf.
+此项目衍生于 `appium/php-client`
 
-@link     https://www.hyperf.io
-@document https://hyperf.wiki
-@contact  group@hyperf.io
-@license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+@link   https://github.com/appium/appium-php
+@link   https://github.com/Gemini-D/appium-php-client
+@author Isaac Murchie <isaac@saucelabs.com>
+@author limingxinleo <l@hyperf.io>
 EOF;
 
 return (new PhpCsFixer\Config())

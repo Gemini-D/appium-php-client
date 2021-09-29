@@ -4,12 +4,13 @@
     "license": "MIT",
     "keywords": [
         "php",
-        "hyperf"
+        "appium",
+        "php-client"
     ],
     "description": "",
     "autoload": {
         "psr-4": {
-            "Appium\\Client\\": "src/"
+            "Appium\\": "src/"
         }
     },
     "autoload-dev": {
@@ -20,7 +21,8 @@
     "require": {
         "php": ">=7.4",
         "guzzlehttp/guzzle": "^6.3|^7.0",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit-selenium": "^9.0"
     },
     "require-dev": {
         "appium/php-client": "^0.3.0",
