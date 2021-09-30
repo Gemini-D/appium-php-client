@@ -552,11 +552,12 @@ abstract class AppiumTestCase extends \PHPUnit\Extensions\Selenium2TestCase
 
     /**
      * @param \Closure[] $steps
+     * @return null|mixed
      */
     protected function runSteps(array $steps)
     {
         $runner = new StepRunner($this, $steps);
-        $runner->wait();
+        return $runner->wait();
     }
 
     private static function defaultSessionStrategy()
