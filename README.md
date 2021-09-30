@@ -22,7 +22,8 @@ declare(strict_types=1);
  */
 namespace HyperfTest\Cases;
 
-use HyperfTest\AppiumTestCase;
+use Appium\AppiumTestCase\Element;
+use Appium\AppiumTestCase;
 
 /**
  * @internal
@@ -37,7 +38,8 @@ class ExampleTest extends AppiumTestCase
     {
         $steps = [
             fn () => $this->byAccessibilityId('好')->click(),
-            fn () => $this->byAccessibilityId('允许')->click(),
+            fn () => $this->byAccessibilityId('允许'),
+            fn (Element $el) => $el->click(),
             fn () => $this->byAccessibilityId('LaunchLogo'),
         ];
 
