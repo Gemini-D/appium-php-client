@@ -1,5 +1,7 @@
 # Appium PHP Client
 
+[![PHPUnit](https://github.com/Gemini-D/appium-php-client/actions/workflows/test.yml/badge.svg)](https://github.com/Gemini-D/appium-php-client/actions/workflows/test.yml)
+
 ## 安装
 
 ```
