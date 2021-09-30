@@ -39,8 +39,8 @@ class StepRunner
         $result = null;
         foreach ($this->steps as $step) {
             $waitUntil = new Selenium2TestCase\WaitUntil($this->testCase);
-            $result = $waitUntil->run(function () use ($step) {
-                return $step() ?: true;
+            $result = $waitUntil->run(function () use ($step, $result) {
+                return $step($result) ?: true;
             });
         }
         return $result;
