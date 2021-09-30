@@ -550,6 +550,15 @@ abstract class AppiumTestCase extends \PHPUnit\Extensions\Selenium2TestCase
         return ['x' => $centerX, 'y' => $centerY];
     }
 
+    /**
+     * @param \Closure[] $steps
+     */
+    protected function runSteps(array $steps)
+    {
+        $runner = new StepRunner($this, $steps);
+        $runner->wait();
+    }
+
     private static function defaultSessionStrategy()
     {
         return new AppiumTestCase\SessionStrategy\Isolated();
