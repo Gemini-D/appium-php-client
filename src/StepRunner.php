@@ -31,14 +31,18 @@ class StepRunner
         $this->steps = $steps;
     }
 
-    public function wait(): void
+    /**
+     * @return null|mixed
+     */
+    public function wait()
     {
+        $result = null;
         foreach ($this->steps as $step) {
             $waitUntil = new Selenium2TestCase\WaitUntil($this->testCase);
-            $waitUntil->run(function () use ($step) {
-                $step();
-                return true;
+            $result = $waitUntil->run(function () use ($step) {
+                return $step() ?: true;
             });
         }
+        return $result;
     }
 }
